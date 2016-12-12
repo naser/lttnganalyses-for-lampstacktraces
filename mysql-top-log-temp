@@ -1,0 +1,403 @@
+Checking the trace for lost events...
+Timerange: [2016-12-02 12:28:30.460703279, 2016-12-02 12:29:57.718424625]
+Per-TID mysql query statistics (usec)
+drupal@localhost (ID: 54)                       Count            Min        Average          Max      Stdev  Return values 
+ - select                                          16        234.291       2663.028     34843.69   8583.794  {'success': 16}
+ - set                                              1      23135.066      23135.066    23135.066          ?  {'success': 1}
+ - begin                                            1         40.811         40.811       40.811          ?  {'success': 1}
+Total:                                             18                                                                      
+-----------------------------------------------------------------------------------------------------------------
+drupal@localhost (ID: 55)                       Count            Min        Average          Max      Stdev  Return values 
+ - select                                           2        322.288        412.544        502.8          ?  {'success': 2}
+ - set                                              1        106.312        106.312      106.312          ?  {'success': 1}
+ - update                                           1      56318.131      56318.131    56318.131          ?  {'success': 1}
+Total:                                              4                                                                      
+-----------------------------------------------------------------------------------------------------------------
+drupal@localhost (ID: 56)                       Count            Min        Average          Max      Stdev  Return values 
+ - select                                           3        352.611        420.381      531.532     97.029  {'success': 3}
+ - replace                                          2      41315.772      80891.455   120467.137          ?  {'success': 2}
+ - set                                              1        109.023        109.023      109.023          ?  {'success': 1}
+ - delete                                           1      41063.562      41063.562    41063.562          ?  {'success': 1}
+Total:                                              7                                                                      
+-----------------------------------------------------------------------------------------------------------------
+drupal@localhost (ID: 57)                       Count            Min        Average          Max      Stdev  Return values 
+ - select                                          28         104.19        450.984     2488.788    434.395  {'success': 28}
+ - set                                              1         35.134         35.134       35.134          ?  {'success': 1}
+ - begin                                            1         14.388         14.388       14.388          ?  {'success': 1}
+Total:                                             30                                                                      
+-----------------------------------------------------------------------------------------------------------------
+drupal@localhost (ID: 58)                       Count            Min        Average          Max      Stdev  Return values 
+ - select                                           2        294.023        419.303      544.583          ?  {'success': 2}
+ - set                                              1         114.51         114.51       114.51          ?  {'success': 1}
+ - update                                           1     325658.748     325658.748   325658.748          ?  {'success': 1}
+Total:                                              4                                                                      
+-----------------------------------------------------------------------------------------------------------------
+drupal@localhost (ID: 59)                       Count            Min        Average          Max      Stdev  Return values 
+ - select                                           8         94.342        250.877      451.338    144.707  {'success': 8}
+ - replace                                          7      79095.314     250309.399   579951.066 183755.514  {'success': 7}
+ - set                                              1        102.296        102.296      102.296          ?  {'success': 1}
+Total:                                             16                                                                      
+-----------------------------------------------------------------------------------------------------------------
+drupal@localhost (ID: 60)                       Count            Min        Average          Max      Stdev  Return values 
+ - select                                           8         69.759        110.919      222.454      55.52  {'success': 8}
+ - set                                              1         28.928         28.928       28.928          ?  {'success': 1}
+ - begin                                            1         12.869         12.869       12.869          ?  {'success': 1}
+Total:                                             10                                                                      
+-----------------------------------------------------------------------------------------------------------------
+drupal@localhost (ID: 61)                       Count            Min        Average          Max      Stdev  Return values 
+ - select                                           3        186.141        616.544      870.427    374.742  {'success': 3}
+ - replace                                          2     151633.559     174135.567   196637.575          ?  {'success': 2}
+ - set                                              1         88.844         88.844       88.844          ?  {'success': 1}
+Total:                                              6                                                                      
+-----------------------------------------------------------------------------------------------------------------
+drupal@localhost (ID: 62)                       Count            Min        Average          Max      Stdev  Return values 
+ - select                                           9         87.085        121.968      230.896      50.83  {'success': 9}
+ - set                                              1         33.998         33.998       33.998          ?  {'success': 1}
+ - begin                                            1         16.333         16.333       16.333          ?  {'success': 1}
+Total:                                             11                                                                      
+-----------------------------------------------------------------------------------------------------------------
+drupal@localhost (ID: 63)                       Count            Min        Average          Max      Stdev  Return values 
+ - set                                              1          24.19          24.19        24.19          ?  {'success': 1}
+ - select                                           1        269.461        269.461      269.461          ?  {'success': 1}
+ - replace                                          1     246449.452     246449.452   246449.452          ?  {'success': 1}
+Total:                                              3                                                                      
+-----------------------------------------------------------------------------------------------------------------
+drupal@localhost (ID: 64)                       Count            Min        Average          Max      Stdev  Return values 
+ - select                                          14        106.252        271.199      526.529    145.681  {'success': 14}
+ - set                                              1         41.364         41.364       41.364          ?  {'success': 1}
+ - begin                                            1         23.201         23.201       23.201          ?  {'success': 1}
+Total:                                             16                                                                      
+-----------------------------------------------------------------------------------------------------------------
+drupal@localhost (ID: 65)                       Count            Min        Average          Max      Stdev  Return values 
+ - select                                           2         79.538        112.659       145.78          ?  {'success': 2}
+ - set                                              1         25.699         25.699       25.699          ?  {'success': 1}
+ - update                                           1      46640.073      46640.073    46640.073          ?  {'success': 1}
+Total:                                              4                                                                      
+-----------------------------------------------------------------------------------------------------------------
+drupal@localhost (ID: 66)                       Count            Min        Average          Max      Stdev  Return values 
+ - set                                              1         25.499         25.499       25.499          ?  {'success': 1}
+ - select                                           1        136.958        136.958      136.958          ?  {'success': 1}
+Total:                                              2                                                                      
+-----------------------------------------------------------------------------------------------------------------
+drupal@localhost (ID: 67)                       Count            Min        Average          Max      Stdev  Return values 
+ - select                                          27         68.449        195.415     1060.847    198.354  {'success': 27}
+ - set                                              1         72.112         72.112       72.112          ?  {'success': 1}
+ - begin                                            1         20.739         20.739       20.739          ?  {'success': 1}
+Total:                                             29                                                                      
+-----------------------------------------------------------------------------------------------------------------
+drupal@localhost (ID: 68)                       Count            Min        Average          Max      Stdev  Return values 
+ - select                                           2         77.838        134.325      190.812          ?  {'success': 2}
+ - set                                              1          55.85          55.85        55.85          ?  {'success': 1}
+ - update                                           1     114595.201     114595.201   114595.201          ?  {'success': 1}
+Total:                                              4                                                                      
+-----------------------------------------------------------------------------------------------------------------
+drupal@localhost (ID: 69)                       Count            Min        Average          Max      Stdev  Return values 
+ - select                                           3         90.759        112.574      129.303     19.769  {'success': 3}
+ - set                                              1         20.756         20.756       20.756          ?  {'success': 1}
+Total:                                              4                                                                      
+-----------------------------------------------------------------------------------------------------------------
+drupal@localhost (ID: 70)                       Count            Min        Average          Max      Stdev  Return values 
+ - select                                           7         87.345        145.521      276.809      69.21  {'success': 7}
+ - set                                              1         45.589         45.589       45.589          ?  {'success': 1}
+ - begin                                            1         18.049         18.049       18.049          ?  {'success': 1}
+Total:                                              9                                                                      
+-----------------------------------------------------------------------------------------------------------------
+drupal@localhost (ID: 71)                       Count            Min        Average          Max      Stdev  Return values 
+ - select                                           7          98.26        146.574      270.932     66.447  {'success': 7}
+ - set                                              1         50.346         50.346       50.346          ?  {'success': 1}
+ - begin                                            1          32.78          32.78        32.78          ?  {'success': 1}
+Total:                                              9                                                                      
+-----------------------------------------------------------------------------------------------------------------
+drupal@localhost (ID: 72)                       Count            Min        Average          Max      Stdev  Return values 
+ - select                                          10         84.655      13417.105    132855.36  41966.391  {'success': 10}
+ - set                                              1         33.417         33.417       33.417          ?  {'success': 1}
+ - begin                                            1         16.559         16.559       16.559          ?  {'success': 1}
+Total:                                             12                                                                      
+-----------------------------------------------------------------------------------------------------------------
+drupal@localhost (ID: 73)                       Count            Min        Average          Max      Stdev  Return values 
+ - select                                           2        104.787        353.228      601.669          ?  {'success': 2}
+ - set                                              1        111.972        111.972      111.972          ?  {'success': 1}
+ - replace                                          1     103437.332     103437.332   103437.332          ?  {'success': 1}
+Total:                                              4                                                                      
+-----------------------------------------------------------------------------------------------------------------
+drupal@localhost (ID: 74)                       Count            Min        Average          Max      Stdev  Return values 
+ - select                                           7          113.1        305.867       711.96    200.479  {'success': 7}
+ - set                                              1         38.428         38.428       38.428          ?  {'success': 1}
+ - begin                                            1         16.299         16.299       16.299          ?  {'success': 1}
+Total:                                              9                                                                      
+-----------------------------------------------------------------------------------------------------------------
+drupal@localhost (ID: 75)                       Count            Min        Average          Max      Stdev  Return values 
+ - select                                          27         55.025        236.538     2599.117    482.985  {'success': 27}
+ - set                                              1         29.445         29.445       29.445          ?  {'success': 1}
+ - begin                                            1          8.886          8.886        8.886          ?  {'success': 1}
+Total:                                             29                                                                      
+-----------------------------------------------------------------------------------------------------------------
+drupal@localhost (ID: 76)                       Count            Min        Average          Max      Stdev  Return values 
+ - select                                           2         47.279         87.662      128.046          ?  {'success': 2}
+ - set                                              1         20.977         20.977       20.977          ?  {'success': 1}
+ - update                                           1     215656.246     215656.246   215656.246          ?  {'success': 1}
+Total:                                              4                                                                      
+-----------------------------------------------------------------------------------------------------------------
+drupal@localhost (ID: 77)                       Count            Min        Average          Max      Stdev  Return values 
+ - select                                           3         88.731        125.684      148.169     32.252  {'success': 3}
+ - set                                              1         22.362         22.362       22.362          ?  {'success': 1}
+Total:                                              4                                                                      
+-----------------------------------------------------------------------------------------------------------------
+drupal@localhost (ID: 78)                       Count            Min        Average          Max      Stdev  Return values 
+ - select                                           7         59.993        120.335      230.105     64.656  {'success': 7}
+ - set                                              1         28.623         28.623       28.623          ?  {'success': 1}
+ - begin                                            1          8.834          8.834        8.834          ?  {'success': 1}
+Total:                                              9                                                                      
+-----------------------------------------------------------------------------------------------------------------
+drupal@localhost (ID: 79)                       Count            Min        Average          Max      Stdev  Return values 
+ - select                                           9        101.862        183.999      293.979     67.041  {'success': 9}
+ - set                                              1         38.168         38.168       38.168          ?  {'success': 1}
+ - begin                                            1         20.425         20.425       20.425          ?  {'success': 1}
+Total:                                             11                                                                      
+-----------------------------------------------------------------------------------------------------------------
+drupal@localhost (ID: 80)                       Count            Min        Average          Max      Stdev  Return values 
+ - select                                           7        116.226         250.59      551.709    161.426  {'success': 7}
+ - set                                              1         43.072         43.072       43.072          ?  {'success': 1}
+ - begin                                            1         23.979         23.979       23.979          ?  {'success': 1}
+Total:                                              9                                                                      
+-----------------------------------------------------------------------------------------------------------------
+drupal@localhost (ID: 81)                       Count            Min        Average          Max      Stdev  Return values 
+ - select                                          27         80.327        262.782     2866.628    529.558  {'success': 27}
+ - set                                              1         32.778         32.778       32.778          ?  {'success': 1}
+ - begin                                            1         15.684         15.684       15.684          ?  {'success': 1}
+Total:                                             29                                                                      
+-----------------------------------------------------------------------------------------------------------------
+drupal@localhost (ID: 82)                       Count            Min        Average          Max      Stdev  Return values 
+ - select                                           2         82.972        120.556      158.141          ?  {'success': 2}
+ - set                                              1         23.956         23.956       23.956          ?  {'success': 1}
+ - update                                           1     120219.891     120219.891   120219.891          ?  {'success': 1}
+Total:                                              4                                                                      
+-----------------------------------------------------------------------------------------------------------------
+drupal@localhost (ID: 83)                       Count            Min        Average          Max      Stdev  Return values 
+ - select                                           3        110.736        133.617      150.329     20.505  {'success': 3}
+ - set                                              1         41.803         41.803       41.803          ?  {'success': 1}
+Total:                                              4                                                                      
+-----------------------------------------------------------------------------------------------------------------
+drupal@localhost (ID: 84)                       Count            Min        Average          Max      Stdev  Return values 
+ - select                                           7         68.085        149.456      277.957     74.043  {'success': 7}
+ - set                                              1         42.306         42.306       42.306          ?  {'success': 1}
+ - begin                                            1         16.571         16.571       16.571          ?  {'success': 1}
+Total:                                              9                                                                      
+-----------------------------------------------------------------------------------------------------------------
+drupal@localhost (ID: 85)                       Count            Min        Average          Max      Stdev  Return values 
+ - select                                           9         74.207        158.666      320.914     91.285  {'success': 9}
+ - set                                              1         36.324         36.324       36.324          ?  {'success': 1}
+ - begin                                            1         13.256         13.256       13.256          ?  {'success': 1}
+Total:                                             11                                                                      
+-----------------------------------------------------------------------------------------------------------------
+drupal@localhost (ID: 86)                       Count            Min        Average          Max      Stdev  Return values 
+ - select                                           7         89.529        153.264      295.554     79.232  {'success': 7}
+ - set                                              1         33.005         33.005       33.005          ?  {'success': 1}
+ - begin                                            1         13.352         13.352       13.352          ?  {'success': 1}
+Total:                                              9                                                                      
+-----------------------------------------------------------------------------------------------------------------
+drupal@localhost (ID: 87)                       Count            Min        Average          Max      Stdev  Return values 
+ - select                                          27         76.513        237.425     2000.279    373.072  {'success': 27}
+ - set                                              1         41.357         41.357       41.357          ?  {'success': 1}
+ - begin                                            1         40.178         40.178       40.178          ?  {'success': 1}
+Total:                                             29                                                                      
+-----------------------------------------------------------------------------------------------------------------
+drupal@localhost (ID: 88)                       Count            Min        Average          Max      Stdev  Return values 
+ - select                                           2        188.468        277.927      367.386          ?  {'success': 2}
+ - set                                              1         56.047         56.047       56.047          ?  {'success': 1}
+ - update                                           1      60950.079      60950.079    60950.079          ?  {'success': 1}
+Total:                                              4                                                                      
+-----------------------------------------------------------------------------------------------------------------
+drupal@localhost (ID: 89)                       Count            Min        Average          Max      Stdev  Return values 
+ - select                                           5        137.099        248.126      450.832    131.165  {'success': 5}
+ - set                                              1         27.105         27.105       27.105          ?  {'success': 1}
+ - delete                                           1     137476.016     137476.016   137476.016          ?  {'success': 1}
+Total:                                              7                                                                      
+-----------------------------------------------------------------------------------------------------------------
+drupal@localhost (ID: 90)                       Count            Min        Average          Max      Stdev  Return values 
+ - select                                           7        103.735        160.677      311.671     74.628  {'success': 7}
+ - set                                              1         53.032         53.032       53.032          ?  {'success': 1}
+ - begin                                            1         35.086         35.086       35.086          ?  {'success': 1}
+Total:                                              9                                                                      
+-----------------------------------------------------------------------------------------------------------------
+drupal@localhost (ID: 91)                       Count            Min        Average          Max      Stdev  Return values 
+ - select                                           9         90.952        159.057      297.904     69.218  {'success': 9}
+ - set                                              1         38.658         38.658       38.658          ?  {'success': 1}
+ - begin                                            1         34.121         34.121       34.121          ?  {'success': 1}
+Total:                                             11                                                                      
+-----------------------------------------------------------------------------------------------------------------
+drupal@localhost (ID: 92)                       Count            Min        Average          Max      Stdev  Return values 
+ - select                                          27         78.053        266.585     2624.422    487.756  {'success': 27}
+ - set                                              1          34.82          34.82        34.82          ?  {'success': 1}
+ - begin                                            1         12.934         12.934       12.934          ?  {'success': 1}
+Total:                                             29                                                                      
+-----------------------------------------------------------------------------------------------------------------
+drupal@localhost (ID: 93)                       Count            Min        Average          Max      Stdev  Return values 
+ - select                                           2        148.191        194.031      239.872          ?  {'success': 2}
+ - set                                              1         32.229         32.229       32.229          ?  {'success': 1}
+ - update                                           1      122386.51      122386.51    122386.51          ?  {'success': 1}
+Total:                                              4                                                                      
+-----------------------------------------------------------------------------------------------------------------
+drupal@localhost (ID: 94)                       Count            Min        Average          Max      Stdev  Return values 
+ - select                                           3          99.08        145.572      175.267     40.776  {'success': 3}
+ - set                                              1          32.36          32.36        32.36          ?  {'success': 1}
+Total:                                              4                                                                      
+-----------------------------------------------------------------------------------------------------------------
+drupal@localhost (ID: 95)                       Count            Min        Average          Max      Stdev  Return values 
+ - select                                           7         96.967        155.952      299.365     86.477  {'success': 7}
+ - set                                              1          60.81          60.81        60.81          ?  {'success': 1}
+ - begin                                            1         25.256         25.256       25.256          ?  {'success': 1}
+Total:                                              9                                                                      
+-----------------------------------------------------------------------------------------------------------------
+drupal@localhost (ID: 96)                       Count            Min        Average          Max      Stdev  Return values 
+ - select                                           7         88.998        148.268      265.987     71.762  {'success': 7}
+ - set                                              1         50.265         50.265       50.265          ?  {'success': 1}
+ - begin                                            1         32.348         32.348       32.348          ?  {'success': 1}
+Total:                                              9                                                                      
+-----------------------------------------------------------------------------------------------------------------
+drupal@localhost (ID: 97)                       Count            Min        Average          Max      Stdev  Return values 
+ - select                                           9         79.639       1393.685    11255.214   3698.592  {'success': 9}
+ - set                                              1         38.212         38.212       38.212          ?  {'success': 1}
+ - begin                                            1         16.848         16.848       16.848          ?  {'success': 1}
+Total:                                             11                                                                      
+-----------------------------------------------------------------------------------------------------------------
+drupal@localhost (ID: 98)                       Count            Min        Average          Max      Stdev  Return values 
+ - select                                          27         61.149          264.5     2621.995    483.701  {'success': 27}
+ - set                                              1         46.945         46.945       46.945          ?  {'success': 1}
+ - begin                                            1          24.74          24.74        24.74          ?  {'success': 1}
+Total:                                             29                                                                      
+-----------------------------------------------------------------------------------------------------------------
+drupal@localhost (ID: 99)                       Count            Min        Average          Max      Stdev  Return values 
+ - select                                           2         89.797        147.424      205.051          ?  {'success': 2}
+ - set                                              1          30.85          30.85        30.85          ?  {'success': 1}
+ - update                                           1     479490.107     479490.107   479490.107          ?  {'success': 1}
+Total:                                              4                                                                      
+-----------------------------------------------------------------------------------------------------------------
+drupal@localhost (ID: 100)                      Count            Min        Average          Max      Stdev  Return values 
+ - select                                           3         98.195        124.307      146.984     24.575  {'success': 3}
+ - set                                              1         41.858         41.858       41.858          ?  {'success': 1}
+Total:                                              4                                                                      
+-----------------------------------------------------------------------------------------------------------------
+drupal@localhost (ID: 101)                      Count            Min        Average          Max      Stdev  Return values 
+ - select                                           7         70.777        134.958       303.34     82.103  {'success': 7}
+ - set                                              1         29.083         29.083       29.083          ?  {'success': 1}
+ - begin                                            1         13.105         13.105       13.105          ?  {'success': 1}
+Total:                                              9                                                                      
+-----------------------------------------------------------------------------------------------------------------
+drupal@localhost (ID: 102)                      Count            Min        Average          Max      Stdev  Return values 
+ - select                                           7         89.673        155.693      302.656     78.603  {'success': 7}
+ - set                                              1         46.334         46.334       46.334          ?  {'success': 1}
+ - begin                                            1         18.944         18.944       18.944          ?  {'success': 1}
+Total:                                              9                                                                      
+-----------------------------------------------------------------------------------------------------------------
+drupal@localhost (ID: 103)                      Count            Min        Average          Max      Stdev  Return values 
+ - select                                           9         90.234        149.364        275.1     61.846  {'success': 9}
+ - set                                              1         42.318         42.318       42.318          ?  {'success': 1}
+ - begin                                            1         32.641         32.641       32.641          ?  {'success': 1}
+Total:                                             11                                                                      
+-----------------------------------------------------------------------------------------------------------------
+drupal@localhost (ID: 104)                      Count            Min        Average          Max      Stdev  Return values 
+ - set                                              1         42.966         42.966       42.966          ?  {'success': 1}
+ - select                                           1        118.229        118.229      118.229          ?  {'success': 1}
+ - replace                                          1      79893.099      79893.099    79893.099          ?  {'success': 1}
+Total:                                              3                                                                      
+-----------------------------------------------------------------------------------------------------------------
+drupal@localhost (ID: 105)                      Count            Min        Average          Max      Stdev  Return values 
+ - select                                           9         85.206        177.514      324.091     71.748  {'success': 9}
+ - set                                              1         53.606         53.606       53.606          ?  {'success': 1}
+ - begin                                            1         34.696         34.696       34.696          ?  {'success': 1}
+Total:                                             11                                                                      
+-----------------------------------------------------------------------------------------------------------------
+drupal@localhost (ID: 106)                      Count            Min        Average          Max      Stdev  Return values 
+ - select                                          27         79.327        265.907     2719.438    505.062  {'success': 27}
+ - set                                              1         67.364         67.364       67.364          ?  {'success': 1}
+ - begin                                            1         23.872         23.872       23.872          ?  {'success': 1}
+Total:                                             29                                                                      
+-----------------------------------------------------------------------------------------------------------------
+drupal@localhost (ID: 107)                      Count            Min        Average          Max      Stdev  Return values 
+ - select                                           2         95.818         126.71      157.601          ?  {'success': 2}
+ - set                                              1         41.318         41.318       41.318          ?  {'success': 1}
+ - update                                           1     107257.491     107257.491   107257.491          ?  {'success': 1}
+Total:                                              4                                                                      
+-----------------------------------------------------------------------------------------------------------------
+drupal@localhost (ID: 108)                      Count            Min        Average          Max      Stdev  Return values 
+ - select                                           3         88.347        145.002      179.742     49.482  {'success': 3}
+ - set                                              1         18.658         18.658       18.658          ?  {'success': 1}
+Total:                                              4                                                                      
+-----------------------------------------------------------------------------------------------------------------
+drupal@localhost (ID: 109)                      Count            Min        Average          Max      Stdev  Return values 
+ - select                                           7         82.543        140.878      262.145     66.275  {'success': 7}
+ - set                                              1         29.797         29.797       29.797          ?  {'success': 1}
+ - begin                                            1         17.743         17.743       17.743          ?  {'success': 1}
+Total:                                              9                                                                      
+-----------------------------------------------------------------------------------------------------------------
+drupal@localhost (ID: 110)                      Count            Min        Average          Max      Stdev  Return values 
+ - select                                           7         104.15        157.152      297.689     75.178  {'success': 7}
+ - set                                              1         52.042         52.042       52.042          ?  {'success': 1}
+ - begin                                            1         34.163         34.163       34.163          ?  {'success': 1}
+Total:                                              9                                                                      
+-----------------------------------------------------------------------------------------------------------------
+
+Total queries: 604
+-----------------------------------------------------------------------------------------------------------------
+Per-(db,table) query statistics (usec)
+Table:polyfab./*                                Count            Min        Average          Max      Stdev  Return values 
+ - update                                          10      46640.073     164917.248   479490.107  138894.23  {'success': 10}
+Total:                                             10                                                                      
+-----------------------------------------------------------------------------------------------------------------
+Table:polyfab.`pfwiki_job`                      Count            Min        Average          Max      Stdev  Return values 
+ - select                                           1      132855.36      132855.36    132855.36          ?  {'success': 1}
+Total:                                              1                                                                      
+-----------------------------------------------------------------------------------------------------------------
+Table:polyfab.unknown                           Count            Min        Average          Max      Stdev  Return values 
+ - set                                             57         18.658         450.88    23135.066   3058.339  {'success': 57}
+ - begin                                           33          8.834         22.112       40.811      9.205  {'success': 33}
+ - replace                                         14      41315.772     192285.694   579951.066 146561.875  {'success': 14}
+Total:                                            104                                                                      
+-----------------------------------------------------------------------------------------------------------------
+Table:polyfab.`pfwiki_objectcache`              Count            Min        Average          Max      Stdev  Return values 
+ - select                                          62         47.279        226.066      870.427    173.027  {'success': 62}
+ - delete                                           2      41063.562      89269.789   137476.016          ?  {'success': 2}
+Total:                                             64                                                                      
+-----------------------------------------------------------------------------------------------------------------
+Table:polyfab.`pfwiki_revision` inner join `pfwiki_page`          Count            Min        Average          Max      Stdev  Return values 
+ - select                                           8        168.906        1640.53    11255.214   3887.678  {'success': 8}
+Total:                                              8                                                                      
+-----------------------------------------------------------------------------------------------------------------
+Table:polyfab.`pfwiki_page`,`pfwiki_revision`,`pfwiki_text`          Count            Min        Average          Max      Stdev  Return values 
+ - select                                           1        889.781        889.781      889.781          ?  {'success': 1}
+Total:                                              1                                                                      
+-----------------------------------------------------------------------------------------------------------------
+Table:polyfab.`pfwiki_module_deps`              Count            Min        Average          Max      Stdev  Return values 
+ - select                                          33         79.249        684.709     2866.628   1008.866  {'success': 33}
+Total:                                             33                                                                      
+-----------------------------------------------------------------------------------------------------------------
+Table:polyfab.`pfwiki_l10n_cache`               Count            Min        Average          Max      Stdev  Return values 
+ - select                                         256         55.025        340.517     34843.69   2169.491  {'success': 256}
+Total:                                            256                                                                      
+-----------------------------------------------------------------------------------------------------------------
+Table:polyfab.`pfwiki_page`                     Count            Min        Average          Max      Stdev  Return values 
+ - select                                           9        163.711        282.413      505.101    144.072  {'success': 9}
+Total:                                              9                                                                      
+-----------------------------------------------------------------------------------------------------------------
+Table:polyfab.`pfwiki_page_restrictions`          Count            Min        Average          Max      Stdev  Return values 
+ - select                                           8         84.655        191.717      417.506    130.182  {'success': 8}
+Total:                                              8                                                                      
+-----------------------------------------------------------------------------------------------------------------
+Table:polyfab.`pfwiki_page` inner join `pfwiki_revision`          Count            Min        Average          Max      Stdev  Return values 
+ - select                                          24         91.811        188.893      816.452    174.334  {'success': 24}
+Total:                                             24                                                                      
+-----------------------------------------------------------------------------------------------------------------
+Table:polyfab.`pfwiki_msg_resource`             Count            Min        Average          Max      Stdev  Return values 
+ - select                                          78         61.149        150.454      845.693    117.854  {'success': 78}
+Total:                                             78                                                                      
+-----------------------------------------------------------------------------------------------------------------
+Table:polyfab.`pfwiki_user_newtalk`             Count            Min        Average          Max      Stdev  Return values 
+ - select                                           8         85.206        146.418      279.623     70.108  {'success': 8}
+Total:                                              8                                                                      
+-----------------------------------------------------------------------------------------------------------------
+
+Total queries: 604
+-----------------------------------------------------------------------------------------------------------------
+Per-TID mysql query detailts
+command.py73

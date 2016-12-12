@@ -1,0 +1,113 @@
+#!/bin/bash
+#
+# The MIT License (MIT)
+#
+# Copyright (C) 2015 - Julien Desfossez <jdesfossez@efficios.com>
+#
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+#
+# The above copyright notice and this permission notice shall be included in
+# all copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+# SOFTWARE.
+
+# Helper to setup a local LTTng tracing session with the appropriate
+# settings for the lttng analyses scripts
+
+SESSION_NAME="lttng-analysis-$RANDOM"
+
+destroy()
+{
+	lttng destroy $SESSION_NAME >/dev/null
+	echo ""
+	echo "You can now launch the analyses scripts on /$TRACEPATH"
+	exit 0
+}
+
+if test "$1" = "-h" -o "$1" = "--help"; then
+	echo "usage : $0"
+	exit 0
+fi
+
+pgrep -u root lttng-sessiond >/dev/null
+if test $? != 0; then
+	echo "Starting lttng-sessiond as root (trying sudo, start manually if \
+it fails)"
+	sudo lttng-sessiond -d
+	if test $? != 0; then
+		exit 1
+	fi
+fi
+
+SUDO=""
+groups|grep tracing >/dev/null
+if test $? != 0; then
+	echo "You are not a member of the tracing group, so you need root \
+access, the script will try with sudo"
+	SUDO="sudo"
+fi
+
+# check if lttng command if in the path
+# check if the user can execute the command (with sudo if not in tracing group)
+# check if lttng-modules is installed
+$SUDO lttng list -k | grep sched_switch >/dev/null
+if test $? != 0; then
+	echo "Something went wrong executing \"$SUDO lttng list -k | grep sched_switch\", \
+try to fix the problem manually and then start the script again"
+fi
+
+# if our random session name was already in use, add more randomness...
+$SUDO lttng list | grep $SESSION_NAME
+if test $? = 0; then
+	SESSION_NAME="$SESSION_NAME-$RANDOM"
+fi
+$SUDO lttng list | grep $SESSION_NAME
+if test $? = 0; then
+	echo "Cannot create a random session name, something must be wrong"
+	exit 2
+fi
+
+lttng create $SESSION_NAME >/tmp/lttngout
+[[ $? != 0 ]] && exit 2
+TRACEPATH=$(grep Traces /tmp/lttngout | cut -d'/' -f2-)
+rm /tmp/lttngout
+
+trap "destroy" SIGINT SIGTERM
+
+lttng enable-channel -k chan1 --subbuf-size=8M >/dev/null
+
+# events that always work
+lttng enable-event -s $SESSION_NAME -k sched_switch,sched_wakeup,sched_waking,block_rq_complete,block_rq_issue,block_bio_remap,block_bio_backmerge,netif_receive_skb,net_dev_xmit,sched_process_fork,sched_process_exec,lttng_statedump_process_state,lttng_statedump_file_descriptor,lttng_statedump_block_device,mm_vmscan_wakeup_kswapd,mm_page_free,mm_page_alloc,block_dirty_buffer,irq_handler_entry,irq_handler_exit,softirq_entry,softirq_exit,softirq_raise,irq_softirq_entry,irq_softirq_exit,irq_softirq_raise,kmem_mm_page_alloc,kmem_mm_page_free -c chan1 >/dev/null
+[[ $? != 0 ]] && echo "Warning: some events were not enabled, some analyses might not be complete"
+
+# events that might fail on specific kernels and that are not mandatory
+lttng enable-event -s $SESSION_NAME -k writeback_pages_written -c chan1 >/dev/null 2>&1
+[[ $? != 0 ]] && echo "Warning: Optional event writeback_pages_written could not be enabled, everything will still work (experimental feature)"
+
+lttng enable-event -s $SESSION_NAME -k -c chan1 --syscall -a >/dev/null
+[[ $? != 0 ]] && exit 2
+# if you want to add Perf counters, do something like that :
+#lttng add-context -s $SESSION_NAME -k -t perf:cache-misses -t perf:major-faults -t perf:branch-load-misses >/dev/null
+
+lttng start $SESSION_NAME >/dev/null
+[[ $? != 0 ]] && exit 2
+
+echo -n "The trace is now recording, press ctrl+c to stop it "
+
+while true; do
+	echo -n "."
+	sleep 1
+done
+
+destroy

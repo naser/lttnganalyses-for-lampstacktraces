@@ -1,0 +1,25 @@
+lttng-cputop 222
+lttng-iolatencyfreq 222
+lttng-iolatencystats 222
+lttng-iolatencytop 222
+lttng-iolog 222
+lttng-iousagetop 222
+lttng-irqfreq 222
+lttng-irqlog 222 
+lttng-irqstats 222
+lttng-memtop 222
+lttng-syscallstats 222
+lttng-schedlog 222
+lttng-schedtop 222
+lttng-schedstats 222
+lttng-schedfreq 222
+lttng-periodlog 222
+lttng-periodtop 222
+lttng-periodstats 222
+lttng-periodfreq 222
+lttng-phptop 222
+lttng-mysqltop 222
+lttng-lamplog 222
+lttng-lamptop 222
+
+
